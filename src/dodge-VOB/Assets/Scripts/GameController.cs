@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public GameObject panelGameOver;
+    public GameObject machineVOB;
     private void Start(){
         if (instance == null) instance = this;
     }
@@ -14,8 +15,9 @@ public class GameController : MonoBehaviour
     public void TapToStart(){
 
     }
-    public void GameOver(){
+    public void OnGameOver(){
         panelGameOver.SetActive(true);
+        machineVOB.SetActive(false);
     }
     public void OnMainMenu(){
         SceneManager.LoadSceneAsync("Menu");

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private BoxCollider2D boxCol2d;
     private List<char> stackMove = new List<char>();
+    
     [SerializeField]
     private float speed, fJump;
     private int jumpTime, dodgeTime;
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "VOB"){
             rb2d.freezeRotation = false;
+            if (GameController.instance != null) GameController.instance.OnGameOver();
         }
     }
 }
