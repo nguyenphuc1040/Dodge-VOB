@@ -7,6 +7,8 @@ public class FireVOB : MonoBehaviour
     public GameObject VOB;
     public Transform player, pointAim;
     private float speed;
+    [SerializeField]
+    private float timing;
     
     void Start()
     {
@@ -19,7 +21,7 @@ public class FireVOB : MonoBehaviour
     }
     IEnumerator Fire(){
         speed = Random.Range(40f,50f);
-        yield return new WaitForSeconds(Random.Range(3f,6f));
+        yield return new WaitForSeconds(Random.Range(timing,timing + 3));
         var VOBFire =  (GameObject) Instantiate(VOB,transform.position,transform.rotation);      
         VOBFire.GetComponent<Rigidbody2D>().velocity = VOBFire.transform.right * -speed;
         Destroy(VOBFire,5); // Destroy Volleyball after 5 seconds

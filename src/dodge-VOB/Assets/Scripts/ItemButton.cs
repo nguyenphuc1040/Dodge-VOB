@@ -14,6 +14,7 @@ public class ItemButton: MonoBehaviour{
         btn.GetComponent<Image>().sprite = Resources.Load<Sprite>("Imgs/BtnPlayer/"+info.imageUrl);
     }
     public void OnPress(){
-        
+        if (MenuController.instance != null) MenuController.instance.OnChoiceItem(btn.transform);   
+        if (GameManagement.instance != null) GameManagement.instance.currentItem = info;
     }
 }

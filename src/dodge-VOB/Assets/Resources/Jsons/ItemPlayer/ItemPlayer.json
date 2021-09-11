@@ -1,14 +1,14 @@
 {
     "playerItem": [
         {
-            "name": "THinh",
-            "imageUrl": "krasin",
-            "texture": "linkTexture"
+            "name": "THINH",
+            "imageUrl": "thinh",
+            "texture": "thinh"
         },
         {
-            "name": "THinh",
-            "imageUrl": "krasin",
-            "texture": "linkTexture"
+            "name": "VI",
+            "imageUrl": "vi",
+            "texture": "vi"
         }
     ]   
 }
